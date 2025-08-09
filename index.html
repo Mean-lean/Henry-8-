@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헨리 8세의 어린시절 자서전 📚💀</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .medieval-font { font-family: 'Cinzel', serif; }
+        .modern-font { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px dotted #f59e0b;
+            cursor: help;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 280px;
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            padding: 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -140px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .emoji-large {
+            font-size: 2rem;
+            display: inline-block;
+            margin: 0 8px;
+        }
+        
+        .share-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            transition: all 0.3s ease;
+        }
+        
+        .share-button:hover {
+            background: linear-gradient(45deg, #ee5a52, #ff6b6b);
+            transform: scale(1.05);
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .fun-fact {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-left: 4px solid #06b6d4;
+        }
+        
+        .medieval-border {
+            border: 3px solid #d97706;
+            border-image: repeating-linear-gradient(45deg, #d97706, #d97706 10px, #f59e0b 10px, #f59e0b 20px) 3;
+        }
+        
+        @media (max-width: 768px) {
+            .tooltip .tooltiptext {
+                width: 200px;
+                margin-left: -100px;
+            }
+        }
+        
+        .pie-chart-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 modern-font">
+    <!-- Header -->
+    <div class="gradient-bg text-white py-12 mb-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="medieval-font text-4xl md:text-6xl font-bold mb-4">
+                <span class="emoji-large">👑</span>
+                헨리 8세의 어린시절 자서전
+                <span class="emoji-large">💀</span>
+            </h1>
+            <p class="text-xl md:text-2xl opacity-90">Chapter 1 – My Childhood</p>
+            <div class="mt-8 bg-black bg-opacity-30 rounded-2xl p-6 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-yellow-300 mb-3 medieval-font">
+                    🏰 Tudor Life Tip
+                </h3>
+                <p class="text-lg leading-relaxed">
+                    Children aren't born cruel, violent, or sociopathic. So it takes an exhausting amount of neglect and callousness to prepare them for leadership!
+                </p>
+                <p class="text-base mt-3 opacity-80">
+                    아이들은 태어날 때부터 잔인하거나 폭력적이거나 사이코패스는 아니다. 그러니 그런 리더를 만들려면 무수한 방임과 냉담함이 필요하다!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 max-w-6xl">
+        
+        <!-- Introduction Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 card-hover">
+            <div class="flex items-center mb-6">
+                <span class="text-4xl mr-4">📖</span>
+                <h2 class="medieval-font text-3xl font-bold text-gray-800">Dear Everyone Who Writes About Themselves</h2>
+            </div>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-6">
+                <p class="text-lg leading-relaxed text-gray-700">
+                    I always skip the bits about your childhood. It's boring. You knew nothing. You did nothing. 
+                    You simply ate food, made noises, and got larger.
+                </p>
+                <p class="text-base mt-3 text-gray-600">
+                    나는 당신들 어린 시절 이야기는 항상 넘긴다. 지루하니까. 당신은 아무것도 몰랐고, 아무것도 안 했고, 
+                    그냥 밥 먹고, 소리 지르고, 커졌을 뿐이니까.
+                </p>
+            </div>
+            <p class="text-lg text-gray-700">
+                I'll be a role model here and keep this brief. This is everything you need to know about my early life.
+            </p>
+            <button class="share-button text-white px-6 py-3 rounded-full font-semibold mt-4 flex items-center mx-auto">
+                <i class="fas fa-share-alt mr-2"></i>
+                이거 공유각 ㅋㅋ
+            </button>
+        </div>
+
+        <!-- Parents Section -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            
+            <!-- Father Card -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-blue-600 text-white p-6">
+                    <h3 class="medieval-font text-2xl font-bold flex items-center">
+                        <span class="emoji-large">⚔️</span>
+                        My Father: Henry VII
+                    </h3>
+                </div>
+                <div class="p-6">
+                    <div class="mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Enrique_VII_de_Inglaterra%2C_por_un_artista_an%C3%B3nimo.jpg/640px-Enrique_VII_de_Inglaterra%2C_por_un_artista_an%C3%B3nimo.jpg" 
+                             alt="Henry VII" 
+                             class="w-32 h-40 object-cover rounded-lg mx-auto medieval-border">
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        My father was Henry VII, whom <span class="tooltip">God had made King<span class="tooltiptext">보스워스 전투에서 리처드 3세를 죽이고 왕이 된 건 하나님의 뜻이라고 믿었음 🙏</span></span> 
+                        of England by successfully doing nasty stabbing things to Richard III on the battlefield at 
+                        <span class="tooltip">Bosworth Field<span class="tooltiptext">1485년 장미전쟁의 마지막 전투! 튜더 왕조가 시작된 역사적 순간 ⚔️</span></span> in 1485.
+                    </p>
+                    <div class="fun-fact p-4 rounded-lg">
+                        <p class="font-semibold text-cyan-700">🎯 Fun Fact</p>
+                        <p class="text-sm">Which is why I like God so much.</p>
+                        <p class="text-xs mt-1 opacity-75">그래서 나는 하나님을 좋아한다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mother Card -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="bg-pink-600 text-white p-6">
+                    <h3 class="medieval-font text-2xl font-bold flex items-center">
+                        <span class="emoji-large">🌹</span>
+                        My Mother: Elizabeth of York
+                    </h3>
+                </div>
+                <div class="p-6">
+                    <div class="mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/British_School%2C_16th_century_-_Elizabeth_of_York_%281465-1503%29_-_RCIN_403447_-_Royal_Collection.jpg" 
+                             alt="Elizabeth of York" 
+                             class="w-32 h-40 object-cover rounded-lg mx-auto medieval-border">
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        My mother was Elizabeth of York, who might have married Richard III but didn't. 
+                        And wouldn't have anyway and never had any physical contact with him...
+                    </p>
+                    <div class="warning-box p-4 rounded-lg">
+                        <p class="font-bold text-red-700 flex items-center">
+                            <span class="emoji-large">💀</span>
+                            WARNING
+                        </p>
+                        <p class="text-sm">If you say she did I shall have your eyeballs pulled out through your nostrils.</p>
+                        <p class="text-xs mt-1">그런 말 하면 콧구멍으로 눈알을 뽑아버리겠다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marriage Reasons Chart -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 card-hover">
+            <h3 class="medieval-font text-3xl font-bold text-center mb-8 text-gray-800">
+                <span class="emoji-large">💕</span>
+                Why Dad Married Mom: Scientific Analysis
+                <span class="emoji-large">📊</span>
+            </h3>
+            <div class="pie-chart-container">
+                <canvas id="marriageChart" style="height: 300px;"></canvas>
+            </div>
+            <div class="mt-6 bg-gray-50 p-6 rounded-lg">
+                <h4 class="font-bold text-lg mb-3">결혼 동기 분석:</h4>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-pink-100 p-3 rounded">
+                        <span class="font-semibold">A) Pretty 예뻤음</span>
+                        <div class="text-xs mt-1">기본 중의 기본</div>
+                    </div>
+                    <div class="bg-blue-100 p-3 rounded">
+                        <span class="font-semibold">B) Extremely nice 매우 착함</span>
+                        <div class="text-xs mt-1">성격도 중요하지</div>
+                    </div>
+                    <div class="bg-yellow-100 p-3 rounded">
+                        <span class="font-semibold">C) Political reasons 정치적 이유</span>
+                        <div class="text-xs mt-1">플랜태저넷 혈통으로 정통성 up</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Battle of Bosworth -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 card-hover">
+            <div class="text-center mb-6">
+                <h3 class="medieval-font text-3xl font-bold text-gray-800 mb-4">
+                    <span class="emoji-large">⚔️</span>
+                    The Battle That Started It All
+                </h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Battle_of_Bosworth_by_Philip_James_de_Loutherbourg.jpg" 
+                     alt="Battle of Bosworth" 
+                     class="w-full max-w-2xl mx-auto rounded-xl shadow-lg">
+            </div>
+            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                <h4 class="font-bold text-red-700 mb-3">
+                    <i class="fas fa-sword mr-2"></i>
+                    보스워스 전투 (1485)
+                </h4>
+                <p class="text-gray-700">
+                    장미전쟁의 마지막 전투로, 헨리 튜더가 리처드 3세를 무찌르고 헨리 7세로 즉위하며 튜더 왕조가 시작된 계기. 
+                    영국 역사상 중요한 왕조 교체 사건이다.
+                </p>
+                <div class="mt-4 text-sm bg-white p-3 rounded">
+                    <strong>💡 MZ세대를 위한 해설:</strong> 
+                    쉽게 말해서 아빠가 칼로 찌르기 게임에서 이겨서 왕이 된 거임 ⚔️👑
+                </div>
+            </div>
+        </div>
+
+        <!-- Siblings Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 card-hover">
+            <h3 class="medieval-font text-3xl font-bold text-center mb-8 text-gray-800">
+                <span class="emoji-large">👪</span>
+                Meet the Siblings
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Arthur -->
+                <div class="text-center">
+                    <div class="bg-yellow-100 p-6 rounded-xl">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Anglo-Flemish_School%2C_Arthur%2C_Prince_of_Wales_%28Granard_portrait%29_-004_%28cropped%29.jpg" 
+                             alt="Arthur Tudor" 
+                             class="w-24 h-30 object-cover rounded-lg mx-auto mb-4 medieval-border">
+                        <h4 class="font-bold text-lg">Arthur 형</h4>
+                        <p class="text-sm text-gray-600 mb-2">미래의 왕 (이었던 자)</p>
+                        <div class="bg-yellow-200 p-3 rounded-lg text-xs">
+                            <p><strong>성격:</strong> 자기애 넘치고 우울함</p>
+                            <p><strong>상태:</strong> conceited and lugubrious</p>
+                            <p><strong>운명:</strong> 일찍 죽어서 내가 왕 됨 😎</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sister 1 -->
+                <div class="text-center">
+                    <div class="bg-pink-100 p-6 rounded-xl">
+                        <div class="w-24 h-30 bg-pink-300 rounded-lg mx-auto mb-4 flex items-center justify-content-center">
+                            <span class="text-4xl">👸</span>
+                        </div>
+                        <h4 class="font-bold text-lg">여동생 #1</h4>
+                        <p class="text-sm text-gray-600 mb-2">서퍽 공작 부인</p>
+                        <div class="bg-pink-200 p-3 rounded-lg text-xs">
+                            <p><strong>처리 방법:</strong> 정략결혼</p>
+                            <p><strong>목적지:</strong> 서퍽 공작령</p>
+                            <p><strong>결과:</strong> 성공적 처리 완료 ✅</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sister 2 -->
+                <div class="text-center">
+                    <div class="bg-purple-100 p-6 rounded-xl">
+                        <div class="w-24 h-30 bg-purple-300 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-4xl">🏴</span>
+                        </div>
+                        <h4 class="font-bold text-lg">여동생 #2</h4>
+                        <p class="text-sm text-gray-600 mb-2">스코틀랜드 여왕</p>
+                        <div class="bg-purple-200 p-3 rounded-lg text-xs">
+                            <p><strong>문제점:</strong> pushy and opinionated</p>
+                            <p><strong>해결책:</strong> 스코틀랜드 유배</p>
+                            <p><strong>교훈:</strong> 까다로운 여성 처리법 학습 📚</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl">
+                <h4 class="font-bold text-lg mb-3">
+                    <span class="emoji-large">🎓</span>
+                    까다로운 여성을 다루는 튜더 가문 전략
+                </h4>
+                <p class="text-gray-700">
+                    스코틀랜드는 당시 잉글랜드의 정치적 동맹이자 잠재적 반대 세력으로, 왕실 간의 정략결혼을 통해 외교적 협상 도구로 자주 활용되었다. 
+                    말 안 듣는 여성을 외국 왕실에 '시집보내는' 방식은 명예로운 유배이자 통제 수단이었다.
+                </p>
+                <div class="mt-3 text-sm bg-white p-3 rounded">
+                    <strong>💡 현대 번역:</strong> 까다로운 여자는 멀리 보내버리자 (물론 지금은 안 됨) 😅
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Lessons Learned -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 card-hover">
+            <h3 class="medieval-font text-3xl font-bold text-center mb-8 text-gray-800">
+                <span class="emoji-large">📚</span>
+                이 챕터에서 배운 것들
+            </h3>
+            
+            <div class="space-y-6">
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">✨</span>
+                        <div>
+                            <p class="font-semibold text-blue-800">Why the Bible doesn't have Jesus's childhood stories?</p>
+                            <p class="text-gray-700">왜 성경에는 예수의 어린 시절 이야기가 없을까? 이제 알겠다.</p>
+                            <p class="text-sm mt-2 text-blue-600">
+                                💡 어린 시절은 지루하니까 넘어간 게 맞음 ㅇㅇ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">🏰</span>
+                        <div>
+                            <p class="font-semibold text-green-800">Childhood is just a drawbridge to adulthood</p>
+                            <p class="text-gray-700">어린 시절은 단지 성인의 성으로 향하는 도개교일 뿐이다.</p>
+                            <p class="text-sm mt-2 text-green-600">
+                                💡 <span class="tooltip">도개교(drawbridge)<span class="tooltiptext">성의 출입문 역할을 하는 다리. 여기서는 어린 시절이 그저 통과 지점일 뿐이라는 은유</span></span>: 본질이 아니라 수단이라는 뜻
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-r-lg">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">🏴</span>
+                        <div>
+                            <p class="font-semibold text-purple-800">Scotland exists for difficult women!</p>
+                            <p class="text-gray-700">까다로운 여성을 위한 존재, 스코틀랜드!</p>
+                            <p class="text-sm mt-2 text-purple-600">
+                                💡 중세 왕실의 여성 처리 매뉴얼 1단계 (현재는 사용 금지)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-3">📖</span>
+                        <div>
+                            <p class="font-semibold text-yellow-800">Short chapters feel so good</p>
+                            <p class="text-gray-700">나만 그런가? 짧은 챕터는 참 기분 좋다.</p>
+                            <p class="text-sm mt-2 text-yellow-600">
+                                💡 현대인도 공감하는 독서 팁: 긴 글은 지루해 😴
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with Social Share -->
+        <div class="text-center py-12">
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl p-8 mx-auto max-w-2xl">
+                <h3 class="text-2xl font-bold mb-4">
+                    <span class="emoji-large">📱</span>
+                    MZ세대여, 공유하라!
+                </h3>
+                <p class="mb-6">이 병맛 역사를 친구들에게도 알려주세요</p>
+                <div class="flex justify-center space-x-4">
+                    <button class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fab fa-instagram mr-2"></i>
+                        인스타 스토리
+                    </button>
+                    <button class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fab fa-twitter mr-2"></i>
+                        트위터 RT
+                    </button>
+                    <button class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-link mr-2"></i>
+                        링크 복사
+                    </button>
+                </div>
+                <p class="text-sm mt-4 opacity-75">
+                    #헨리8세 #영어공부 #병맛역사 #튜더왕조 #중세유머
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Marriage reasons pie chart
+        const ctx = document.getElementById('marriageChart').getContext('2d');
+        const marriageChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Pretty 예뻤음', 'Extremely Nice 착함', 'Political 정치적'],
+                datasets: [{
+                    data: [47.5, 47.5, 5],
+                    backgroundColor: [
+                        '#ec4899',
+                        '#3b82f6', 
+                        '#f59e0b'
+                    ],
+                    borderWidth: 3,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Share buttons functionality
+        document.querySelectorAll('.share-button, button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (this.textContent.includes('링크 복사')) {
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        this.innerHTML = '<i class="fas fa-check mr-2"></i>복사 완료!';
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-link mr-2"></i>링크 복사';
+                        }, 2000);
+                    });
+                } else {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                }
+            });
+        });
+
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
